@@ -4,14 +4,14 @@ class MyHeader extends HTMLElement {
         this.innerHTML = `
             <header class="header">
                 <div class="logo">
-                    <a href="../html/index.html">H</a>
+                    <a href="/home.html">H</a>
                 </div>
                 <nav class="nav">
                     <ul class="main-menu">
                         <li class="nav-item">
                             <a href="#">ABOUT</a>
                             <ul class="submenu">
-                                <li><a href="home.html">호텔 소개</a></li>
+                                <li><a href="/home.html">호텔 소개</a></li>
                                 <li><a href="#">오시는길</a></li>
                             </ul>
                         </li>
@@ -26,8 +26,8 @@ class MyHeader extends HTMLElement {
                         <li class="nav-item">
                             <a href="#">RESERVATION</a>
                             <ul class="submenu">
-                                <li><a href="reservation1.html">예약안내</a></li>
-                                <li><a href="reservation2.html">실시간예약</a></li>
+                                <li><a href="/html/reservation1.html">예약안내</a></li>
+                                <li><a href="/html/reservation2.html">실시간예약</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
