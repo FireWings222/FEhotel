@@ -1,0 +1,69 @@
+/* footer.css */
+
+.footer {
+    background-color: #222;
+    color: #888;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.footer-logo {
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* 아이콘 사이 간격을 조금 더 넓게 */
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 20px; 
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-info p {
+    font-size: 11px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.footer-policy {
+    margin: 15px 0;
+    font-size: 11px;
+}
+
+.footer-policy a {
+    color: #aaa;
+    margin: 0 5px;
+}
+
+.copyright {
+    margin-top: 10px;
+}
+
+.btn-top {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+@media (max-width: 999px) {
+    .footer { padding: 40px 20px; }
+    .footer-logo { font-size: 24px; }
+    .social-links { gap: 15px; margin-bottom: 20px; }
+    .footer-info p { font-size: 10px; }
+    .btn-top { right: 15px; bottom: 15px; width: 35px; height: 35px; }
+}

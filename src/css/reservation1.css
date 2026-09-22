@@ -1,0 +1,234 @@
+@charset "utf-8";
+
+/* 헤더 영역 */
+header {
+    text-align: center;
+    padding: 40px 0 30px;
+}
+header .logo {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+header nav ul li a {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #111;
+}
+
+/* 메인 배너 (Hero Section) */
+.hero {
+    position: relative;
+    height: 350px;
+    /* CSS 폴더 기준 한 단계 위(src)로 가서 html 폴더 안의 RESERVATION1.jpg 접근 */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/reservaioncount.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #ddd;
+}
+
+/* 컨텐츠 영역 */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+/* 테이블 (요금표) */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* 화면이 좁아지면 가로 스크롤을 자동으로 생성합니다 */
+}
+
+/* 테이블 (요금표) */
+.pricing-table {
+    width: 100%;
+    min-width: 800px; /* 🌟 2. 새로 추가: 아무리 화면이 좁아져도 800px 이하로는 안 줄어들게 고정! */
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 13px;
+}
+.pricing-table th, .pricing-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    vertical-align: middle;
+}
+.pricing-table th {
+    background-color: #e2e2e2;
+    color: #555;
+    font-weight: 500;
+}
+.pricing-table td {
+    color: #666;
+}
+
+.pricing-table tbody tr {
+    transition: background-color 0.2s ease; /* 부드럽게 색이 변하도록 애니메이션 추가 */
+}
+
+.pricing-table tbody tr:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+/* 인포 카드 영역 */
+.info-cards {
+    display: flex;
+    margin-bottom: 50px;
+}
+.card {
+    flex: 1;
+    padding: 50px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card:nth-child(1) { background-color: #f7f7f7; }
+.card:nth-child(2) { background-color: #efefef; }
+.card:nth-child(3) { background-color: #dcdcdc; }
+
+.card h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: #333;
+}
+.card p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 5px;
+}
+
+/* 정책 (규정) 영역 */
+.policy-box {
+    border: 1px solid #ddd;
+}
+.policy-header {
+    background-color: #e2e2e2;
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+.policy-content {
+    padding: 25px 20px;
+    font-size: 13px;
+    color: #555;
+    line-height: 2;
+}
+.policy-content p {
+    margin-bottom: 5px;
+}
+
+/* 푸터 영역 */
+footer {
+    background-color: #222;
+    color: #999;
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 12px;
+    position: relative;
+}
+footer .footer-logo {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.social-icons span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 22px;
+    color: #999;
+    font-size: 12px;
+    cursor: pointer;
+}
+.footer-info p {
+    margin-bottom: 5px;
+}
+.footer-links {
+    margin: 15px 0;
+}
+.footer-links a {
+    margin: 0 10px;
+}
+.copyright {
+    margin-top: 20px;
+    color: #666;
+}
+
+/* TOP 버튼 */
+.btn-top {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: #2e6243;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+.btn-top:hover {
+    background-color: #1e452e;
+}
+
+/* 반응형 처리 */
+@media (max-width: 768px) {
+    .pricing-table {
+        font-size: 11px;
+    }
+    .info-cards {
+        flex-direction: column;
+    }
+    header nav ul {
+        gap: 20px;
+    }
+    .btn-top {
+        right: 20px;
+        bottom: 20px;
+    }
+}

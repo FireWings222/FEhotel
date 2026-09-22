@@ -1,0 +1,343 @@
+/* reservation3.css */
+
+.sub-hero {
+    background: url('../img/reservaioncount.jpg') no-repeat center/cover;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.sub-hero h2 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.reservation-detail-section {
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.detail-container {
+    display: flex;
+    gap: 50px;
+}
+
+.room-info-area {
+    flex: 1.2;
+}
+
+#main-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.thumb-list {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.thumb-list img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.thumb-list img:hover {
+    border-color: #333;
+}
+
+.room-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.eng-desc {
+    color: #888;
+    margin-top: 10px;
+}
+
+.reservation-form-area {
+    flex: 1;
+    padding-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.form-group input, .form-group select {
+    padding: 10px;
+    width: 100%;
+    max-width: 200px;
+    border: 1px solid #ccc;
+}
+
+.inline-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px; 
+    padding-bottom: 10px;
+}
+
+.inline-group label {
+    margin-bottom: 0;
+}
+
+.note {
+    font-size: 12px;
+    color: #888;
+}
+
+#extra-guest {
+    width: 100px; /* 기존보다 훨씬 작게 설정 */
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* 🌟 2. 총 합계는 왼쪽, 가격은 오른쪽에 배치하기 */
+.total-price-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    /* padding을 위 15px, 좌우 0, 아래 30px로 수정하여 위쪽 간격을 좁힙니다 */
+    padding: 15px 0 30px 0; 
+    border-bottom: 1px solid #333;
+    margin-bottom: 30px;
+}
+
+.total-price-box span {
+    font-size: 14px;
+}
+
+.total-price-box strong {
+    margin-left: auto; /* 🌟 핵심: 숫자를 오른쪽 끝으로 쫙 밀어버립니다 */
+    font-size: 32px;
+    margin-right: 10px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-group button {
+    flex: 1;
+    padding: 15px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-cancel {
+    background-color: #fff;
+    border: 1px solid #ccc !important;
+    color: #333;
+}
+
+.btn-submit {
+    background-color: #222; /* 활성화 시 기본 색상을 완전한 검정색으로 변경 */
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:disabled {
+    background-color: #ddd !important;
+    color: #888 !important;
+    cursor: not-allowed;
+}
+
+/* 🌟 커스텀 달력 스타일 */
+.custom-calendar {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 30px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.calendar-header h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.nav-btn:disabled {
+    color: #ccc;
+    cursor: default;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.day.sun { color: #ff6b6b; } /* 일요일 빨간색 */
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 15px;
+    text-align: center;
+}
+
+.date-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+/* 현재 달이 아니거나 지나간 날짜 */
+.date-cell.disabled {
+    color: #ddd;
+    pointer-events: none;
+}
+
+/* 선택 가능한 일반 날짜 마우스 오버 */
+.date-cell:not(.disabled):not(.reserved):hover {
+    background-color: #f5f5f5;
+}
+
+/* 예약 완료된 날짜 */
+.date-cell.reserved {
+    color: #ccc; /* 숫자 색상을 연하게 */
+    pointer-events: none;
+}
+
+.reserved-text {
+    font-size: 11px;
+    color: #ff9999;
+    margin-top: 4px;
+}
+
+/* 사용자가 클릭해서 선택한 날짜 */
+.date-cell.selected, 
+.date-cell.in-range {
+    background-color: #2ecc71; /* 시안과 동일한 초록색 */
+    color: #fff !important;    /* 일요일의 빨간색 글씨를 덮어쓰기 위해 !important 사용 */
+    font-weight: bold;
+}
+
+/* 날짜 아래에 들어갈 "입실", "퇴실" 글자 스타일 */
+.date-cell .label {
+    font-size: 10px;
+    margin-top: 3px;
+    font-weight: normal;
+}
+
+/* 🌟 기간 선택 사이의 날짜 배경 (인-레인지) */
+.date-cell.in-range {
+    background-color: #f0f0f0; /* 연한 회색 배경 */
+}
+
+#room-title {
+    text-align: center;      /* 글씨를 가운데로 정렬합니다 */
+    margin-top: 60px;        /* 위쪽으로 60px 여백을 줍니다 */
+    margin-bottom: 40px;     /* 아래쪽 이미지와의 간격을 40px 줍니다 */
+    font-size: 24px;         /* 폰트 크기 */
+    letter-spacing: 2px;     /* 글자 사이 간격을 살짝 띄워 고급스럽게 */
+    font-weight: bold;       /* 글씨를 굵게 */
+}
+
+.modal-overlay {
+    display: none; /* 기본적으로는 숨겨둡니다 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 50px 80px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content p {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 35px;
+    letter-spacing: -0.5px;
+    white-space: pre-line; /* \n 을 넣으면 줄바꿈이 되도록 설정 */
+    line-height: 1.5;
+}
+
+.modal-content button {
+    background-color: #222;
+    color: #fff;
+    border: none;
+    padding: 12px 40px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #000;
+}
+
+@media (max-width: 999px) {
+    .sub-hero { height: 200px; }
+    .sub-hero h2 { font-size: 28px; }
+    
+    /* 상세 정보와 달력을 위아래로 분리 */
+    .detail-container { flex-direction: column; gap: 30px; }
+    
+    #main-img { height: 250px; }
+    .custom-calendar { max-width: 100%; margin: 0 auto 30px; }
+    .form-group input, .form-group select { max-width: 100%; }
+}

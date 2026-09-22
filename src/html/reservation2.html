@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객실 선택 - H Hotel</title>
+    
+    <link rel="stylesheet" href="../css/reservation2.css">
+    <link rel="stylesheet" href="..\css\header.css">
+    <link rel="stylesheet" href="..\css\footer.css">
+    <link rel="stylesheet" href="..\css\hotel-chat.css">
+    <script src="..\js\MyHeader.js" defer></script>
+    <script src="..\js\MyFooter.js" defer></script>
+    <script src="..\js\hotel-chat.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <my-header></my-header>
+
+    <!-- 공통 서브 히어로 영역 -->
+    <section class="sub-hero">
+        <h2>RESERVATION</h2>
+        <p>실시간예약</p>
+    </section>
+
+    <!-- 객실 선택 영역 -->
+    <section class="room-select-section">
+        <h3 class="section-title">객실 선택</h3>
+        
+        <div class="room-list">
+            <!-- db.json의 id에 맞춰 roomId 파라미터를 전달합니다 -->
+            <a href="reservation3.html?roomId=1" class="room-card" style="background-image: url('../img/standard.jpg');">
+                <span class="room-name">STANDARD ⟶</span>
+            </a>
+            <a href="reservation3.html?roomId=2" class="room-card" style="background-image: url('../img/deluxe.jpg');">
+                <span class="room-name">DELUXE ⟶</span>
+            </a>
+            <a href="reservation3.html?roomId=3" class="room-card" style="background-image: url('../img/premium.jpg');">
+                <span class="room-name">PREMIUM ⟶</span>
+            </a>
+            <a href="reservation3.html?roomId=4" class="room-card" style="background-image: url('../img/sweetroom.jpg');">
+                <span class="room-name">SWEET ⟶</span>
+            </a>
+        </div>
+
+        <!-- 취소 규정 안내 -->
+        <div class="policy-box">
+        <div class="policy-header">취소 및 환불 규정</div>
+        <div class="policy-content">
+            <p>숙박 예정일 1일 전 18시까지는 위약금 없이 취소 및 변경이 가능합니다.</p>
+            <p>숙박 예정일 1일 전 18시 이후 취소/변경 및 노쇼(No-show) 발생 시,</p>
+            <p>- 성수기 : 최초 1일 숙박 요금의 80%가 위약금으로 부과됩니다.</p>
+            <p>- 비수기(성수기 외 기간) : 최초 1일 숙박 요금의 10%가 위약금으로 부과됩니다.</p>
+            <p>일부 패키지의 경우 별도의 취소규정이 적용됩니다.</p>
+        </div>
+    </div>
+    </section>
+
+    <my-footer></my-footer>
+</body>
+</html>

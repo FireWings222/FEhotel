@@ -1,0 +1,104 @@
+/* header.css */
+/* 기본 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', 'Apple SD Gothic Neo', sans-serif;
+    color: #333;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    text-align: center;
+    padding: 40px 0 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.logo a {
+    text-decoration: none; /* 밑줄 없애기 */
+    color: inherit;        /* 부모 요소의 글자색(검은색)을 그대로 물려받기 */
+}
+
+.main-menu {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.nav-item {
+    position: relative;
+    padding-bottom: 25px;
+}
+
+.nav-item > a {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #333;
+    transition: color 0.2s;
+}
+
+.nav-item:hover > a {
+    color: #000;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    min-width: 120px;
+    padding: 15px 0 20px;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid #f0f0f0;
+    border-top: none;
+}
+
+.nav-item:hover .submenu {
+    display: flex; 
+}
+
+.submenu a {
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+    transition: color 0.2s, font-weight 0.2s;
+    white-space: nowrap;
+}
+
+.submenu a:hover {
+    color: #000;
+    font-weight: bold;
+}
+
+@media (max-width: 999px) {
+    .logo { font-size: 32px; margin-bottom: 20px; }
+    .main-menu { gap: 20px; flex-wrap: wrap; padding: 0 10px; }
+    .nav-item > a { font-size: 12px; }
+}

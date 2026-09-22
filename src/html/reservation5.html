@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예약 등록 - H Hotel</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/reservation5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="../js/MyHeader.js" defer></script>
+    <script src="../js/MyFooter.js" defer></script>
+    <script src="../js/reservation5.js" defer></script>
+    <script src="../js/calendar.js" defer></script>
+</head>
+<body>
+    <my-header></my-header>
+
+    <section class="sub-hero">
+        <h2>RESERVATION</h2>
+        <p>실시간예약</p>
+    </section>
+
+    <section class="reservation-submit-section">
+        <h3 class="section-title">예약 등록</h3>
+
+        <div class="submit-container">
+            <!-- 왼쪽: 입력 폼 -->
+            <div class="form-area">
+                <div class="input-row">
+                    <label>ROOM</label>
+                    <input type="text" id="disp-room" readonly disabled>
+                </div>
+                <div class="input-row">
+                    <label>추가인원</label>
+                    <input type="text" id="disp-guests" readonly disabled>
+                </div>
+                
+                <!-- 예약명 입력 -->
+                <div class="input-row">
+                    <label>예약명</label>
+                    <div class="input-wrap">
+                        <input type="text" id="input-name" placeholder="예약명을 입력해 주세요.">
+                        <p class="error-msg" id="err-name">필수 입력 값입니다.</p>
+                    </div>
+                </div>
+                
+                <!-- 전화번호 입력 -->
+                <div class="input-row">
+                    <label>전화번호</label>
+                    <div class="input-wrap">
+                        <input type="text" id="input-phone" placeholder="-를 제외하고 입력해 주세요." maxlength="11">
+                        <p class="error-msg" id="err-phone">11자리의 숫자만 입력해 주세요.</p>
+                    </div>
+                </div>
+
+                <div class="total-row">
+                    <span>총 합계</span>
+                    <strong><span id="disp-price">0</span> 원</strong>
+                </div>
+
+            </div>
+
+            <!-- 오른쪽: 선택된 날짜 달력 (읽기 전용) -->
+            <div class="calendar-area">
+                <div class="custom-calendar">
+                    <div class="calendar-header">
+                        <h4 id="calendar-title"></h4>
+                    </div>
+                    <div class="calendar-days">
+                        <div class="day sun">일</div>
+                        <div class="day">월</div>
+                        <div class="day">화</div>
+                        <div class="day">수</div>
+                        <div class="day">목</div>
+                        <div class="day">금</div>
+                        <div class="day">토</div>
+                    </div>
+                    <div id="calendar-grid" class="calendar-grid"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="btn-group bottom-btn-group">
+            <button class="btn-cancel" onclick="history.back()">취소</button>
+            <button type="button" class="btn-submit" id="final-submit-btn">예약하기</button>
+        </div>
+    </section>
+
+    <my-footer></my-footer>
+    <div id="success-modal" class="modal-overlay">
+        <div class="modal-content">
+            <p>예약이 완료되었습니다.</p>
+            <button id="modal-confirm-btn">확인</button>
+        </div>
+    </div>
+</body>
+</html>

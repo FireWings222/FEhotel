@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H Hotel - RESERVATION</title>
+    <!-- 폰트 적용 (Noto Sans KR) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- 외부 CSS 파일 연결 -->
+    <link rel="stylesheet" href="../css/reservation1.css">
+    <link rel="stylesheet" href="..\css\header.css">
+    <link rel="stylesheet" href="..\css\footer.css">
+    <script src="..\js\reservation1.js" defer></script>
+    <script src="..\js\MyHeader.js" defer></script>
+    <script src="..\js\MyFooter.js" defer></script>
+</head>
+<body>
+
+    <!-- 헤더 -->
+    <my-header></my-header>
+
+    <!-- 메인 배너 -->
+    <section class="hero">
+        <h1>RESERVATION</h1>
+        <p>예약안내</p>
+    </section>
+
+    <!-- 메인 컨텐츠 -->
+    <main class="container">
+        <h2 class="section-title">예약안내</h2>
+
+        <!-- 요금표 -->
+        <section class="price-section">
+        <h3 class="section-title">객실 요금표</h3>
+        
+        <!-- 🌟 화면이 좁아지면 가로 스크롤이 생기도록 감싸주는 div -->
+        <div class="table-responsive">
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th rowspan="2">객실</th>
+                        <th rowspan="2">면적</th>
+                        <th rowspan="2">인원<br>(기준/최대)</th>
+                        <th colspan="3">비수기<br>(10.01-06.30)</th>
+                        <th colspan="3">성수기<br>(07.01-09.30)</th>
+                    </tr>
+                    <tr>
+                        <th>주중</th>
+                        <th>주말</th>
+                        <th>휴일</th>
+                        <th>주중</th>
+                        <th>주말</th>
+                        <th>휴일</th>
+                    </tr>
+                </thead>
+                <tbody id="price-tbody">
+                    <!-- 자바스크립트가 db.json에서 데이터를 가져와 여기에 표를 만듭니다 -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+        <!-- 인포 카드 -->
+        <section class="info-cards">
+            <div class="card">
+                <h3>숙박 조건</h3>
+                <p>디럭스 & 스위트 : 성인2 + 아동2 (만12세이하까지만 해당)</p>
+                <p>스위트 : 성인4 + 아동2 (만12세이하까지만 해당)</p>
+            </div>
+            <div class="card">
+                <h3>식사 제공</h3>
+                <p>디럭스 & 스위트 (성인 2명 제공), 스위트 (성인 4명 제공)</p>
+                <p>12세미만 아동 2명 차일드 메뉴 무료 제공</p>
+                <p>3박 예약시 : 조식 3회, 중·석식 4회</p>
+                <p>4박 예약시 : 조식 4회, 중·석식 6회</p>
+            </div>
+            <div class="card">
+                <h3>세부 사항</h3>
+                <p>키즈 카페 쿠폰 제공 (아동 2명까지 가능, 2시간 제한)</p>
+                <p>키즈 클럽 무료 이용 (아동 2명까지 가능, 숙박 기간동안 무제한 이용)</p>
+                <p>라운지 쿠폰 제공 (맥주 or 쉐이크 or 망고빙수 중 택1)</p>
+            </div>
+        </section>
+
+        <!-- 취소 및 환불 규정 -->
+        <section class="policy-box">
+            <div class="policy-header">
+                취소 및 환불 규정
+            </div>
+            <div class="policy-content">
+                <p>숙박 예정일 1일 전 18시까지는 위약금 없이 취소 및 변경이 가능합니다.</p>
+                <p>숙박 예정일 1일 전 18시 이후 취소/변경 및 노쇼(No-show) 발생 시,</p>
+                <p>- 성수기 : 최초 1일 숙박 요금의 80%가 위약금으로 부과됩니다.</p>
+                <p>- 비수기(성수기 외 기간) : 최초 1일 숙박 요금의 10%가 위약금으로 부과됩니다.</p>
+                <p style="margin-top: 10px;">일부 패키지의 경우 별도의 취소규정이 적용됩니다.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <my-footer></my-footer>
+
+</body>
+</html>

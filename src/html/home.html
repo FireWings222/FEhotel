@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H Hotel</title>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="..\css\header.css">
+    <link rel="stylesheet" href="..\css\footer.css">
+    <link rel="stylesheet" href="../css/hotel-chat.css">
+    <script src="../js/hotel-chat-config.js" defer></script>
+    <script src="../js/hotel-chat.js" defer></script>
+    <script src="../js/home.js" defer></script>
+    <script src="..\js\MyHeader.js" defer></script>
+    <script src="..\js\MyFooter.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <my-header></my-header>
+
+    <!-- 메인 비주얼 영역 -->
+    <section class="hero swiper mySwiper">
+        <div class="swiper-wrapper">
+            <!-- 첫 번째 슬라이드 -->
+            <div class="swiper-slide slide-1">
+                <div class="hero-content">
+                    <h2>SWEET MOMENT</h2>
+                    <a href="#" class="btn-more">SEE MORE</a>
+                </div>
+            </div> 
+            <!-- 두 번째 슬라이드 -->
+            <div class="swiper-slide slide-2">
+                <div class="hero-content">
+                    <h2>RELAXING TIME</h2>
+                    <a href="#" class="btn-more">SEE MORE</a>
+                </div>
+            </div>
+            <!-- 세 번째 슬라이드 -->
+            <div class="swiper-slide slide-3">
+                <div class="hero-content">
+                    <h2>PERFECT HOLIDAY</h2>
+                    <a href="#" class="btn-more">SEE MORE</a>
+                </div>
+            </div>
+        </div>
+        <!-- Swiper 하단 점(Pagination) -->
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- 룸 영역 -->
+    <section class="rooms-section">
+        <h3 class="section-title">ROOMS</h3>
+        <div class="slider-wrapper">
+            <button type="button" class="slider-btn prev-btn" id="slide-prev">&lt;</button>
+            
+            <!-- 🌟 1. id="rooms-slider" 추가됨 -->
+            <div class="rooms-container" id="rooms-slider">
+                <div class="room-item"><img src="../img/호텔방.jpg" alt="Room 1"></div>
+                <div class="room-item"><img src="../img/호텔방2.jpg" alt="Room 2"></div>
+                <div class="room-item"><img src="../img/호텔방3.jpg" alt="Room 3"></div>
+                <div class="room-item"><img src="../img/호텔방4.jpg" alt="Room 4"></div>
+                <div class="room-item"><img src="../img/호텔방5.jpg" alt="Room 5"></div>
+            </div>
+            
+            <button type="button" class="slider-btn next-btn" id="slide-next">&gt;</button>
+        </div> <!-- 🌟 2. 빠져있던 닫는 div 태그 추가 -->
+    </section>
+
+    <!-- 이벤트 영역 -->
+    <section class="event-section">
+        <h3 class="section-title">EVENT</h3>
+        <div class="event-grid">
+            <div class="event-item">
+                <img src="../img/호텔방.jpg" alt="봄 특가 이벤트">
+                <p>봄 특가 이벤트</p>
+            </div>
+            <div class="event-item">
+                <img src="../img/호텔방.jpg" alt="5월 주요행사">
+                <p>5월 주요행사</p>
+            </div>
+            <div class="event-item">
+                <img src="../img/호텔방.jpg" alt="새로운 객실을 기대해 주세요.">
+                <p>새로운 객실을 기대해 주세요.</p>
+            </div>
+            <div class="event-item">
+                <img src="../img/호텔방.jpg" alt="스파 프로그램 할인">
+                <p>스파 프로그램 할인</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 하단 배너 영역 -->
+    <section class="bottom-banner">
+        <div class="banner-content">
+            <div class="medal-icon">🎀</div> <!-- 아이콘 대체 -->
+            <h2>2024 BEST HOTEL</h2>
+            <p>
+                Can one ever remember love<br>
+                its like trying to summon up<br>
+                the smell of rose sin a cellar.<br>
+                you might see a rose, but never the perfume.
+            </p>
+        </div>
+    </section>
+
+    <!-- 푸터 영역 -->
+    <my-footer></my-footer>
+
+</body>
+</html>

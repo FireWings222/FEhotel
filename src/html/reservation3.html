@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예약하기 - H Hotel</title>
+    <link rel="stylesheet" href="../css/reservation3.css">
+    <link rel="stylesheet" href="..\css\header.css">
+    <link rel="stylesheet" href="..\css\footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../js/MyHeader.js" defer></script>
+    <script src="../js/MyFooter.js" defer></script>
+    <script src="../js/reservation3.js" defer></script>
+    <script src="../js/calendar.js" defer></script>
+</head>
+<body>
+    <my-header></my-header>
+
+    <section class="sub-hero">
+        <h2>RESERVATION</h2>
+        <p>실시간예약</p>
+    </section>
+
+    <section class="reservation-detail-section">
+        <!-- 자바스크립트가 방 이름을 넣어줄 곳 -->
+        <h3 class="section-title" id="room-title">LOADING...</h3>
+
+        <div class="detail-container">
+            <!-- 왼쪽: 이미지 및 설명 -->
+            <div class="room-info-area">
+                <div class="main-image">
+                    <img id="main-img" src="" alt="객실 이미지">
+                </div>
+                <div class="thumb-list" id="thumb-list">
+                    <!-- 자바스크립트가 썸네일 이미지를 추가합니다 -->
+                </div>
+                <div class="room-desc">
+                    <p id="room-desc-ko"></p>
+                    <p id="room-desc-en" class="eng-desc"></p>
+                </div>
+            </div>
+
+            <!-- 오른쪽: 예약 옵션 및 가격 -->
+            <div class="reservation-form-area">
+                <!-- 🌟 커스텀 달력 영역 시작 -->
+                <div class="custom-calendar">
+                    <div class="calendar-header">
+                        <button type="button" id="prev-month" class="nav-btn">&lt;</button>
+                        <h4 id="calendar-title">2026년 08월</h4>
+                        <button type="button" id="next-month" class="nav-btn">&gt;</button>
+                    </div>
+                    <div class="calendar-days">
+                        <div class="day sun">일</div>
+                        <div class="day">월</div>
+                        <div class="day">화</div>
+                        <div class="day">수</div>
+                        <div class="day">목</div>
+                        <div class="day">금</div>
+                        <div class="day">토</div>
+                    </div>
+                    <!-- 자바스크립트가 여기에 날짜(div)들을 생성합니다 -->
+                    <div id="calendar-grid" class="calendar-grid"></div>
+                </div>
+                
+                <div class="form-group inline-group">
+                    <label>추가 인원</label>
+                    <select id="extra-guest">
+                        <option value="0">없음</option>
+                        <option value="1">1명</option>
+                        <option value="2">2명</option>
+                    </select>
+                    <span class="note" id="capacity-note"></span>
+                </div>
+
+                <div class="total-price-box">
+                    <span>총 합계</span>
+                    <strong id="total-price">0</strong> <span>원</span>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn-cancel" onclick="history.back()">취소</button>
+                    <button class="btn-submit">예약하기</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <my-footer></my-footer>
+    <div id="alert-modal" class="modal-overlay">
+        <div class="modal-content">
+            <p id="alert-modal-msg">알림 메시지</p>
+            <button id="alert-modal-confirm-btn">확인</button>
+        </div>
+    </div>
+
+</body>
+</html>

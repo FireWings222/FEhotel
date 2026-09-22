@@ -1,0 +1,117 @@
+/* reservation2.css */
+
+.sub-hero {
+    background: url('../img/reservaioncount.jpg') no-repeat center/cover;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.sub-hero h2 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.room-select-section {
+    max-width: 1000px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.room-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.room-card {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: opacity 0.3s;
+}
+
+.policy-box {
+    border: 1px solid #dcdcdc; /* 이미지와 같은 연하고 깔끔한 테두리 색상 */
+    background-color: #fff;
+    margin-bottom: 50px;
+    margin-top:50px;
+}
+
+/* 상단 회색 제목 바 */
+.policy-header {
+    background-color: #e5e5e5; /* 이미지와 일치하는 연한 회색 배경 */
+    padding: 18px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;              /* 글자 색상도 너무 진하지 않게 조정 */
+    letter-spacing: -0.5px;
+}
+
+/* 내부 텍스트 영역 */
+.policy-content {
+    padding: 30px 25px;       /* 위아래 여백을 넉넉하게 주어 시안과 동일한 비율 유지 */
+    font-size: 13px;
+    color: #666;              /* 본문 텍스트의 편안한 회색톤 */
+    line-height: 1.8;         /* 줄 간격을 알맞게 조절 */
+}
+
+/* 문단 간격 설정 */
+.policy-content p {
+    margin-bottom: 8px;       /* 문단마다 살짝의 간격을 줌 */
+}
+
+/* 마지막 문단은 아래 여백 제거 */
+.policy-content p:last-child {
+    margin-bottom: 0;
+}
+
+.room-card {
+    overflow: hidden; /* 🌟 필수: 이미지가 커질 때 카드 밖으로 튀어나가는 것을 막아줍니다 */
+}
+
+/* 2. 이미지에 부드러운 애니메이션 준비 시간 주기 */
+.room-card img {
+    transition: transform 0.4s ease; /* 0.4초 동안 부드럽게 움직이도록 설정 */
+}
+
+/* 3. 카드에 마우스를 올렸을 때(hover) 이미지를 1.05배 확대 */
+.room-card:hover img {
+    transform: scale(1.05); /* 숫자를 1.1이나 1.2로 바꾸면 더 크게 확대됩니다 */
+}
+
+/* 카드 전체에 그림자와 떠오르는 효과 주기 */
+.room-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-5px); /* 위로 5px 살짝 떠오름 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* 아래쪽에 은은한 그림자 생성 */
+}
+
+@media (max-width: 999px) {
+    .sub-hero { height: 200px; }
+    .sub-hero h2 { font-size: 28px; }
+    .room-card { height: 150px; font-size: 24px; }
+    .policy-box { padding: 20px; font-size: 12px; }
+}
